@@ -6,7 +6,7 @@ const HomeScreen = ({ navigation }) => {
   return (
     <View>
       <Text style={styles.text}>
-        Poop
+        Welcome to my Demos!
       </Text>
       <Button 
         onPress={() => navigation.navigate('Components')}

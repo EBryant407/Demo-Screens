@@ -1,30 +1,39 @@
 import React, {  useState } from 'react';
-import { View, StyleSheet, Button, FlatList } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 import 
     { 
         BoxView,
+        ButtonText,
+        ButtonView,
+        BackgroundView,
 
     } 
     from './styles';
 
 const ColorScreen = () => {
     const [colors, setColors] = useState([]);
-    return <View>
-        <Button title= 'Press me for a color!'
-        onPress={() =>{
-            setColors([...colors, randomRgb()])
-        }}/>
+    return <BackgroundView>
+        <ButtonView>
+            <TouchableOpacity
+                onPress={() =>{
+                setColors([...colors, randomRgb()])
+            }}>
+                <ButtonText>
+                    Press me for a color!
+                </ButtonText>
+            </TouchableOpacity> 
+        </ButtonView>
 
         <FlatList 
             style={{ flexDirection: 'column' }}
-            numColumns={5}
+            numColumns={4}
             keyExtractor={item => item}
             data={colors}
             renderItem={({ item }) => {
                 return <BoxView style={{ backgroundColor: item }} />
             }}
         />
-    </View>
+    </BackgroundView>
 };
 
 const randomRgb = () => {
