@@ -1,12 +1,11 @@
 import React, {  useState } from 'react';
-import { View, StyleSheet, TouchableOpacity, FlatList } from 'react-native';
+import { StyleSheet, TouchableOpacity, FlatList } from 'react-native';
 import 
     { 
         BoxView,
         ButtonText,
         ButtonView,
         BackgroundView,
-
     } 
     from './styles';
 
