@@ -4,7 +4,7 @@ import HomeScreen from './src/screens/HomeScreen';
 import ComponentsScreen from './src/screens/ComponentsScreen/index';
 import ListScreen from './src/screens/ListScreen';
 import ImageScreen from './src/screens/ImageScreen';
-import CounterScreen from './src/screens/CounterScreen';
+import CounterScreen from './src/screens/CounterScreen/index';
 import ColorScreen from './src/screens/ColorScreen/index';
 import SquareScreen from './src/screens/SquareScreen';
 import TextScreen from './src/screens/TextScreen';

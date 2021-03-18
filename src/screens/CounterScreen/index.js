@@ -1,5 +1,11 @@
 import React, { useReducer } from 'react';
-import { View, Text, StyleSheet, Button } from 'react-native';
+import { View, Text, Button } from 'react-native';
+import {
+    CountText,
+    TextView,
+    ParentView,
+}
+    from './styles';
 
 const reducer = (state, action) => {
 
@@ -17,7 +23,7 @@ const CounterScreen = () => {
     const [state, dispatch] = useReducer(reducer, { count: 0 })
 
     return (
-        <View>
+        <ParentView>
             <Button 
                 title='Increase' 
                 onPress={() => {
@@ -28,13 +34,13 @@ const CounterScreen = () => {
                 onPress={() => {
                     dispatch({ type: 'decrement', payload: 1 })
             }} />
-             <Text>
-                Current Count: {state.count}
-            </Text>
-    </View>
+            <TextView>
+                <CountText>
+                    Current Count: {state.count}
+                </CountText>
+            </TextView>
+    </ParentView>
     )
 };
-
-const styles = StyleSheet.create({});
 
 export default CounterScreen;

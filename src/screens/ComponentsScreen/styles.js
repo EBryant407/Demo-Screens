@@ -6,14 +6,14 @@ const {width} = Dimensions.get('window');
 export const TextView = styled.View`
     align-items: center;
     margin-top: 100px;
+    justify-content: center;
 `;
 
 export const TitleText = styled.Text`
-    font-size: 25px;
+    font-size: 22px;
     font-weight: bold;
     font-style: italic;
     margin-bottom: 20px;
-    justify-content: center;
 `;
 
 export const NameText = styled.Text`
