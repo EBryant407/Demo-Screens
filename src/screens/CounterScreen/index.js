@@ -1,9 +1,10 @@
 import React, { useReducer } from 'react';
-import { View, Text, Button } from 'react-native';
+import { Button } from 'react-native';
 import {
     CountText,
     TextView,
     ParentView,
+    TitleText,
 }
     from './styles';
 
@@ -24,6 +25,9 @@ const CounterScreen = () => {
 
     return (
         <ParentView>
+            <TitleText>
+                Welcome to my Counter!
+            </TitleText>
             <Button 
                 title='Increase' 
                 onPress={() => {

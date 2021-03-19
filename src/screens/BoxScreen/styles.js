@@ -21,7 +21,7 @@ export const GreenBox = styled.View`
     width: 50px;
     background-color: green;
     align-self: center;
-    border-width: 2;
+    border-width: 2px;
     border-color: orange;
 `;
 
