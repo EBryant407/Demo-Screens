@@ -3,7 +3,6 @@ import {
     ParentView,
     Image,
     TitleText,
-    ScreenBackground,
   }
     from './styles';
 

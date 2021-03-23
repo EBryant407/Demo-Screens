@@ -1,5 +1,9 @@
 import React from 'react';
-import { View, Text, StyleSheet, FlatList } from 'react-native';
+import { FlatList } from 'react-native';
+import {
+    ParentText,
+  }
+    from './styles';
 
 const ListScreen = () => {
     const friends = [
@@ -20,9 +24,9 @@ const ListScreen = () => {
         data={friends} 
         renderItem={({ item }) => {
             return (
-                <Text style={styles.textStyle}>
+                <ParentText>
                     {item.name} - Age {item.age}
-                </Text>
+                </ParentText>
             );
         }}
         />
@@ -30,11 +34,5 @@ const ListScreen = () => {
     );
 };
 
-const styles = StyleSheet.create({
-    textStyle: {
-
-    }
-
-});
 
 export default ListScreen;

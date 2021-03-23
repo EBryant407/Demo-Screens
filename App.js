@@ -2,7 +2,7 @@ import { createAppContainer } from 'react-navigation';
 import { createStackNavigator } from 'react-navigation-stack';
 import HomeScreen from './src/screens/HomeScreen';
 import ComponentsScreen from './src/screens/ComponentsScreen/index';
-import ListScreen from './src/screens/ListScreen';
+import ListScreen from './src/screens/ListScreen/index';
 import ImageScreen from './src/screens/ImageScreen/index';
 import CounterScreen from './src/screens/CounterScreen/index';
 import ColorScreen from './src/screens/ColorScreen/index';
