@@ -2,31 +2,34 @@ import React from 'react';
 import { FlatList } from 'react-native';
 import {
     ParentText,
+    ParentView,
   }
     from './styles';
 
 const ListScreen = () => {
-    const friends = [
-        { name: 'Friend #1', age: 20 },
-        { name: 'Friend #2', age: 21 },
-        { name: 'Friend #3', age: 22 },
-        { name: 'Friend #4', age: 23 },
-        { name: 'Friend #5', age: 24 },
-        { name: 'Friend #6', age: 25 },
-        { name: 'Friend #7', age: 26 },
-        { name: 'Friend #8', age: 27 },
-        { name: 'Friend #9', age: 28 },
+    const heros = [
+        { hero: 'Gambit', team: '- X-Men' },
+        { hero: 'Silver Surfer', team: '- The Defenders' },
+        { hero: 'Grey Hulk', team: '- The New Fantastic Four' },
+        { hero: 'Thor', team: '- The Avengers' },
+        { hero: 'Banshee', team: '- Generation X' },
+        { hero: 'Moonknight', team: '- Secret Avengers' },
+        { hero: 'Adam Warlock', team: '- Infinity Watch' },
+        { hero: 'Luke Cage', team: '- Heros for Hire' },
+        { hero: 'Havok', team: '- Astonishing X-Men' },
     ]
 
     return (
         <FlatList 
-        keyExtractor={( friend ) => friend.name}
-        data={friends} 
+        keyExtractor={( hero ) => hero.hero}
+        data={heros} 
         renderItem={({ item }) => {
             return (
-                <ParentText>
-                    {item.name} - Age {item.age}
-                </ParentText>
+                <ParentView>
+                    <ParentText>
+                        {item.hero} - Team {item.team}
+                    </ParentText>
+                </ParentView>
             );
         }}
         />
