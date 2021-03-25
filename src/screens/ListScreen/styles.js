@@ -6,5 +6,15 @@ export const ParentView = styled.View`
 `;
 
 export const ParentText = styled.Text`
-    font-size: 23px;
+    font-size: 22px;
+`;
+
+export const HeroText = styled.Text`
+    color: red;
+    font-style: italic;
+`;
+
+export const TeamText = styled.Text`
+    color: green;
+    font-weight: bold;
 `;
