@@ -1,6 +1,10 @@
 import React, { useReducer } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import ColorCounter from '../components/ColorCounter';
+import ColorCounter from '../../components/ColorCounter';
+import {
+    BoxView,
+    ParentView,
+  }
+    from './styles';
 
 const COLOR_INCREMENT = 15;
 
@@ -30,7 +34,7 @@ const SquareScreen = () => {
     const [state, dispatch] = useReducer(reducer, { red: 0, green: 0, blue: 0 });
     const { red, green, blue } = state;
             return (               
-                <View>
+                <ParentView>
                     <ColorCounter
                         onIncrease={() => 
                             dispatch({ type: 'change_red', payload: COLOR_INCREMENT })}
@@ -52,16 +56,10 @@ const SquareScreen = () => {
                             dispatch({ type: 'change_blue', payload: -1 * COLOR_INCREMENT })}
                         color='Blue'
                     />
-                    <View style={{
-                        height: 150,
-                        width: 150,
-                        backgroundColor: `rgb(${red}, ${green}, ${blue})`
-                    }}
-                    />
-                </View>
+                    <BoxView />
+                </ParentView>
                 )
         };
 
-        const styles = StyleSheet.create({});
 
         export default SquareScreen;
