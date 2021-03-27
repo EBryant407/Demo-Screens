@@ -1,15 +1,21 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, TextInput } from 'react-native';
+import { Text, StyleSheet, TextInput } from 'react-native';
 import { useSafeArea } from 'react-native-safe-area-context';
+import {
+    ParentView,
+    PromptText,
+    RequirementText,
+  }
+    from './styles';
 
 
 const TextScreen = () => {
     const [password, setPassword] = useState('');
     return (
-        <View>
-            <Text>
+        <ParentView>
+            <PromptText>
                 Enter Password:
-            </Text>
+            </PromptText>
             <TextInput 
             style={styles.input} 
             autoCapitalize='none'
@@ -18,10 +24,10 @@ const TextScreen = () => {
             onChangeText={(newValue) => setPassword(newValue) }
             />
             {password.length < 4 ? 
-            <Text>
+            <RequirementText>
                 Password must be atleast 4 characters
-            </Text> : null }
-        </View>
+            </RequirementText> : null }
+        </ParentView>
     )
 };
 
