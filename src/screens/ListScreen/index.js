@@ -5,7 +5,8 @@ import {
     ParentView,
     HeroText,
     TeamText,
-  }
+    ScreenBackground,
+}
     from './styles';
 
 const ListScreen = () => {
@@ -22,24 +23,25 @@ const ListScreen = () => {
     ]
 
     return (
-        <FlatList 
-        keyExtractor={( hero ) => hero.hero}
-        data={heros} 
-        renderItem={({ item }) => {
-            return (
-                <ParentView>
-                    <ParentText>
-                        <HeroText>
-                            {item.hero} 
-                        </HeroText> 
-                        - Team 
+        <FlatList
+            keyExtractor={(hero) => hero.hero}
+            data={heros}
+            renderItem={({ item }) => {
+                return (
+
+                    <ParentView>
+                        <ParentText>
+                            <HeroText>
+                                {item.hero}
+                            </HeroText>
+                        - Team
                         <TeamText>
-                            {item.team}
-                        </TeamText>
-                    </ParentText>
-                </ParentView>
-            );
-        }}
+                                {item.team}
+                            </TeamText>
+                        </ParentText>
+                    </ParentView>
+                );
+            }}
         />
 
     );

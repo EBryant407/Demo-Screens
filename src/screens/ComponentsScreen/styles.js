@@ -14,10 +14,12 @@ export const TitleText = styled.Text`
     font-weight: bold;
     font-style: italic;
     margin-bottom: 20px;
+    color: red;
 `;
 
 export const NameText = styled.Text`
     font-size: 30px;
+    color: red;
 `;
 
 export const PictureView = styled.View`
@@ -30,4 +32,8 @@ export const ImageView = styled.Image.attrs(() => ({ resizeMode: 'contain' }))`
     align-self: center;
     margin-top: 100px;
     border-radius: 150px;
+`;
+
+export const ScreenBackground = styled.ImageBackground.attrs(() => ({ resizeMode: 'stretch' }))`
+    flex: 1;
 `;

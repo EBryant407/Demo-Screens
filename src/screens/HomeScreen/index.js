@@ -3,75 +3,81 @@ import { TouchableOpacity } from "react-native";
 import {
   ParentView,
   TitleText,
-  ScreenText
+  ScreenText,
+  ScreenBackground,
 }
   from './styles';
 
 const HomeScreen = ({ navigation }) => {
 
   return (
-    <ParentView>
-      <TitleText>
-        Welcome to my Demos!
-      </TitleText>
 
-      <TouchableOpacity 
-        onPress={() => navigation.navigate('Components')} >
-        <ScreenText>
-          Go to Components Demo
-        </ScreenText> 
-      </TouchableOpacity>
+    <ScreenBackground
+      source={require('../../../assets/sunset.png')}
+    >
+      <ParentView>
+        <TitleText>
+          Welcome to my Demos!
+        </TitleText>
 
-      <TouchableOpacity 
+        <TouchableOpacity
+          onPress={() => navigation.navigate('Components')} >
+          <ScreenText>
+            Go to Components Demo
+        </ScreenText>
+        </TouchableOpacity>
+
+        <TouchableOpacity
           onPress={() => navigation.navigate('List')} >
-          <ScreenText> 
+          <ScreenText>
             Go to List Demo
           </ScreenText>
-      </TouchableOpacity>
+        </TouchableOpacity>
 
-      <TouchableOpacity 
+        <TouchableOpacity
           onPress={() => navigation.navigate('Image')} >
           <ScreenText>
-            Go to Image Screen 
-          </ScreenText>  
-      </TouchableOpacity>
+            Go to Image Screen
+          </ScreenText>
+        </TouchableOpacity>
 
-      <TouchableOpacity 
+        <TouchableOpacity
           onPress={() => navigation.navigate('Counter')} >
           <ScreenText>
             Go to Counter Demo
           </ScreenText>
-      </TouchableOpacity>  
+        </TouchableOpacity>
 
-      <TouchableOpacity 
+        <TouchableOpacity
           onPress={() => navigation.navigate('Color')} >
           <ScreenText>
             Go to Color Demo
           </ScreenText>
-      </TouchableOpacity>
+        </TouchableOpacity>
 
-      <TouchableOpacity 
+        <TouchableOpacity
           onPress={() => navigation.navigate('Square')} >
           <ScreenText>
             Go to Square Demo
           </ScreenText>
-      </TouchableOpacity>
+        </TouchableOpacity>
 
-      <TouchableOpacity 
+        <TouchableOpacity
           onPress={() => navigation.navigate('Text')} >
           <ScreenText>
             Go to Text Demo
           </ScreenText>
-      </TouchableOpacity>
+        </TouchableOpacity>
 
-      <TouchableOpacity 
+        <TouchableOpacity
           onPress={() => navigation.navigate('Box')} >
           <ScreenText>
             Go to Box Demo
           </ScreenText>
-      </TouchableOpacity>
-    </ParentView>
-  )  
+        </TouchableOpacity>
+      </ParentView>
+    </ScreenBackground>
+  )
 };
 
 
