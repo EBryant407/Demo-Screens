@@ -5,36 +5,41 @@ import {
     ParentView,
     PromptText,
     RequirementText,
-  }
+    ScreenBackground,
+}
     from './styles';
 
 
 const TextScreen = () => {
     const [password, setPassword] = useState('');
     return (
-        <ParentView>
-            <PromptText>
-                Enter Password:
+        <ScreenBackground
+            source={require('../../../assets/key.jpg')}
+        >
+            <ParentView>
+                <PromptText>
+                    Enter Password:
             </PromptText>
-            <TextInput 
-            style={styles.input} 
-            autoCapitalize='none'
-            autoCorrect={false}
-            value={password}
-            onChangeText={(newValue) => setPassword(newValue) }
-            />
-            {password.length < 4 ? 
-            <RequirementText>
-                Password must be atleast 4 characters
-            </RequirementText> : null }
-        </ParentView>
+                <TextInput
+                    style={styles.input}
+                    autoCapitalize='none'
+                    autoCorrect={false}
+                    value={password}
+                    onChangeText={(newValue) => setPassword(newValue)}
+                />
+                {password.length < 4 ?
+                    <RequirementText>
+                        Password must be atleast 4 characters
+            </RequirementText> : null}
+            </ParentView>
+        </ScreenBackground>
     )
 };
 
-const styles= StyleSheet.create({
+const styles = StyleSheet.create({
     input: {
         margin: 15,
-        borderColor: 'black',
+        borderColor: 'red',
         borderWidth: 1,
     }
 });

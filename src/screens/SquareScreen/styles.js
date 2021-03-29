@@ -14,3 +14,7 @@ export const TitleText = styled.Text`
     font-style: italic;
     color: gray;
 `;
+
+export const ScreenBackground = styled.ImageBackground.attrs(() => ({ resizeMode: 'stretch' }))`
+    flex: 1;
+`;
