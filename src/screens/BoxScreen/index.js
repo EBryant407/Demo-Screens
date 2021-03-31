@@ -1,21 +1,29 @@
 import React from 'react';
-import 
-    { ParentView, 
-    RedBox, 
-    GreenBox, 
-    PurpleBox } 
+import {
+ParentView,
+RedBox,
+GreenBox,
+PurpleBox,
+ScreenBackground,
+}
     from './styles';
 
 
 const BoxScreen = () => {
-    return <ParentView>
-        <RedBox /> 
+    return (
+    <ScreenBackground
+        source={require('../../../assets/box.jpg')}
+    >
+        <ParentView>
+            <RedBox />
 
-        <GreenBox />
+            <GreenBox />
 
-        <PurpleBox />
+            <PurpleBox />
 
-    </ParentView>
+        </ParentView>
+    </ScreenBackground>
+    );
 };
 
 
