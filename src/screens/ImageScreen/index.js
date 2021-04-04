@@ -3,13 +3,13 @@ import {
     ParentView,
     Image,
     TitleText,
-  }
+}
     from './styles';
 
 const ImageScreen = () => {
     return (
         <ParentView>
-            
+
             <Image
                 source={require('../../../assets/dragon.jpg')} />
             <TitleText>

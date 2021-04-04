@@ -7,13 +7,12 @@ export const CountText = styled.Text`
 `;
 
 export const TextView = styled.View`
-    
+    width: 400px;
 `;
 
 export const ParentView = styled.View`
     align-items: center;
     margin: 50px;
-    
 `;
 
 export const TitleText = styled.Text`

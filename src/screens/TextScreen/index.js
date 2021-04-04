@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-import { Text, StyleSheet, TextInput } from 'react-native';
-import { useSafeArea } from 'react-native-safe-area-context';
+import { TextInput } from 'react-native';
 import {
     ParentView,
     PromptText,
     RequirementText,
     ScreenBackground,
+    InputView,
 }
     from './styles';
 
@@ -20,13 +20,14 @@ const TextScreen = () => {
                 <PromptText>
                     Enter Password:
             </PromptText>
-                <TextInput
-                    style={styles.input}
-                    autoCapitalize='none'
-                    autoCorrect={false}
-                    value={password}
-                    onChangeText={(newValue) => setPassword(newValue)}
-                />
+                <InputView>
+                    <TextInput
+                        autoCapitalize='none'
+                        autoCorrect={false}
+                        value={password}
+                        onChangeText={(newValue) => setPassword(newValue)}
+                    />
+                </InputView>
                 {password.length < 4 ?
                     <RequirementText>
                         Password must be atleast 4 characters
@@ -36,12 +37,6 @@ const TextScreen = () => {
     )
 };
 
-const styles = StyleSheet.create({
-    input: {
-        margin: 15,
-        borderColor: 'red',
-        borderWidth: 1,
-    }
-});
+
 
 export default TextScreen;

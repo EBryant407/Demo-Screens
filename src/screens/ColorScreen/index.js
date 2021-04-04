@@ -1,12 +1,11 @@
-import React, {  useState } from 'react';
-import { StyleSheet, TouchableOpacity, FlatList } from 'react-native';
-import 
-    { 
-        BoxView,
-        ButtonText,
-        ButtonView,
-        BackgroundView,
-    } 
+import React, { useState } from 'react';
+import { TouchableOpacity, FlatList } from 'react-native';
+import {
+    BoxView,
+    ButtonText,
+    ButtonView,
+    BackgroundView,
+}
     from './styles';
 
 const ColorScreen = () => {
@@ -14,16 +13,16 @@ const ColorScreen = () => {
     return <BackgroundView>
         <ButtonView>
             <TouchableOpacity
-                onPress={() =>{
-                setColors([...colors, randomRgb()])
-            }}>
+                onPress={() => {
+                    setColors([...colors, randomRgb()])
+                }}>
                 <ButtonText>
                     Press me for a color!
                 </ButtonText>
-            </TouchableOpacity> 
+            </TouchableOpacity>
         </ButtonView>
 
-        <FlatList 
+        <FlatList
             style={{ flexDirection: 'column' }}
             numColumns={4}
             keyExtractor={item => item}
@@ -42,7 +41,5 @@ const randomRgb = () => {
 
     return `rgb(${red}, ${green}, ${blue})`;
 };
-
-const styles = StyleSheet.create({});
 
 export default ColorScreen;

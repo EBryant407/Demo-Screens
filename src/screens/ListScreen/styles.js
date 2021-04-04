@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 
 export const ParentView = styled.View`
-    margin-top: 30px;
+    margin-top: 50px;
+    align-items: center;
 `;
 
 export const ParentText = styled.Text`

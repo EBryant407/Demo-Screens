@@ -18,7 +18,6 @@ export const ButtonView = styled.View`
     align-items: center;
     justify-content: center;
     margin-vertical: 20px;
-
     height: 40px;
     width: 400px;
 `;

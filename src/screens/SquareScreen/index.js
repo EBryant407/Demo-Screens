@@ -68,6 +68,8 @@ const SquareScreen = () => {
                     style={{
                         height: 200,
                         width: 200,
+                        borderColor: 'white',
+                        borderWidth: 1,
                         backgroundColor: `rgb(${red}, ${green}, ${blue})`
                     }}
                 />

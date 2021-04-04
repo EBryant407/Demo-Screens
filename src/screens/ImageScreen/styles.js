@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 
-
 export const ParentView = styled.View`
     align-items: center;
     background-color: black;
@@ -17,5 +16,5 @@ export const TitleText = styled.Text`
     font-size: 20px;
     font-weight: bold;
     font-style: italic;
-    color: white;
+    color: red;
 `;

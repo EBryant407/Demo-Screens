@@ -17,6 +17,12 @@ export const RequirementText = styled.Text`
     color: red;
 `;
 
+export const InputView = styled.View`
+    margin: 15px;
+    border-color: red;
+    border-width: 1px;
+`;
+
 export const ScreenBackground = styled.ImageBackground.attrs(() => ({ resizeMode: 'cover' }))`
     flex: 1;
 `;

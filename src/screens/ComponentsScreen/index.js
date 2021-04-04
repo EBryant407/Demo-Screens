@@ -26,8 +26,8 @@ const ComponentsScreen = () => {
                     </NameText>
                 </TextView>
                 <PictureView>
-                    <ImageView 
-                        source={require('../../../assets/eric.jpeg')} 
+                    <ImageView
+                        source={require('../../../assets/eric.jpeg')}
                     />
                 </PictureView>
             </View>

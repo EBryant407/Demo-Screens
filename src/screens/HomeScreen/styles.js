@@ -6,8 +6,8 @@ export const ParentView = styled.View`
 
 export const TitleText = styled.Text`
     font-size: 30px;
-    margin-bottom: 70px;
-    margin-top: 20px;
+    margin-bottom: 120px;
+    margin-top: 40px;
     color: white;
 `;
 

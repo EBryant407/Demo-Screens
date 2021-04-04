@@ -5,7 +5,6 @@ import {
     ParentView,
     HeroText,
     TeamText,
-    ScreenBackground,
 }
     from './styles';
 
