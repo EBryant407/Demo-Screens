@@ -21,3 +21,4 @@ After downloading, you simply run the app in a simulator like Expo to run the co
                         -- Basic Usage --
 
 Simply tap the title of the different screens and follow the instructions.
+
