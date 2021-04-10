@@ -17,3 +17,7 @@ This is a few different demo screens, exhibiting some of the different React Nat
                         -- Installation --
 
 After downloading, you simply run the app in a simulator like Expo to run the code. No log ins, no extensions, no worries!
+
+                        -- Basic Usage --
+
+Simply tap the title of the different screens and follow the instructions.
